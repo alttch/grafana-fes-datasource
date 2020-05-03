@@ -1,6 +1,7 @@
 # grafana-fes-datasource
 
-Grafana datasource for [Finac Enterprise Server](https://www.altertech.com/products/fes/)
+Grafana datasource plugin for [Finac Enterprise
+Server](https://www.altertech.com/products/fes/)
 
 (can work with custom [Finac](https://github.com/alttch/finac) servers as well)
 
