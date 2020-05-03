@@ -45,7 +45,7 @@ export class GenericDatasource {
     query.targets = query.targets.filter(t => !t.hide);
     var q = [];
     options['targets'].forEach(option => {
-      q.push(option.target);
+      if (option.target) q.push([option.target, option.type === 'timeserie']);
     });
     if (q) {
       return this.call_query(q).then(result => {
@@ -81,13 +81,14 @@ export class GenericDatasource {
 
   _uuidv4() {
     var dt = new Date().getTime();
-    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(
-      c
-    ) {
-      var r = (dt + Math.random() * 16) % 16 | 0;
-      dt = Math.floor(dt / 16);
-      return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);
-    });
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+      /[xy]/g,
+      function (c) {
+        var r = (dt + Math.random() * 16) % 16 | 0;
+        dt = Math.floor(dt / 16);
+        return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);
+      }
+    );
     return uuid;
   }
 
@@ -110,7 +111,7 @@ export class GenericDatasource {
         },
         redirect: 'error'
       })
-        .then(function(response) {
+        .then(function (response) {
           if (response.ok) {
             response
               .json()
@@ -145,7 +146,7 @@ export class GenericDatasource {
         redirect: 'error',
         body: JSON.stringify(payload)
       })
-        .then(function(response) {
+        .then(function (response) {
           if (response.ok) {
             response
               .json()
