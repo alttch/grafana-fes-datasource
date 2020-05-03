@@ -21,7 +21,7 @@ systemctl restart grafana-server
 
 * Create new data source in Grafana, choose FesDS plugin
 * Use http(s)://yourservername as server URL (no leading slash, no URIs)
-* Enter FES server API key (if set)
+* Enter Finac server API key (if set)
 
 ## Usage
 
