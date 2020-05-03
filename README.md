@@ -11,6 +11,7 @@ Grafana datasource for [Finac Enterprise Server](https://www.altertech.com/produ
 ```
 cd /var/lib/grafana/plugins
 git clone https://github.com/alttch/grafana-fes-datasource
+cd grafana-fes-datasource
 npm i
 npm run build
 systemctl restart grafana-server
