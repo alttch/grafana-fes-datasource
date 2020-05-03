@@ -36,7 +36,7 @@ SELECT account_balance(account='myaccount')
 ### Switching base currency on-the-flow
 
 * create Grafana variable, named e.g. *base*, put there EUR,USD,CZK as the
-* values.
+  values.
 
 * then use variable in queries (don't forget about quotes):
 
