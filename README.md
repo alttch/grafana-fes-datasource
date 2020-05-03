@@ -8,7 +8,7 @@ Grafana datasource for [Finac Enterprise Server](https://www.altertech.com/produ
 
 (become a superuser)
 
-```
+```shell
 cd /var/lib/grafana/plugins
 git clone https://github.com/alttch/grafana-fes-datasource
 cd grafana-fes-datasource
@@ -29,7 +29,7 @@ systemctl restart grafana-server
 
 The data source supports all Finac query commands, e.g.
 
-```
+```sql
 SELECT account_balance(account='myaccount')
 ```
 
@@ -40,7 +40,7 @@ SELECT account_balance(account='myaccount')
 
 * then use variable in queries (don't forget about quotes):
 
-```
+```sql
 SELECT account_balance(account='myaccount', base="${base}")
 ```
 
@@ -48,7 +48,7 @@ SELECT account_balance(account='myaccount', base="${base}")
 
 Use Grafana global time variables to specify time range, e.g.
 
-```
+```sql
 SELECT account_balance_range(account="myaccount", start=${__from}, end=${__to},
 step="20a")
 ```
