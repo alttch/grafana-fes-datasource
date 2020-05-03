@@ -49,10 +49,13 @@ SELECT account_balance(account='myaccount', base="${base}")
 Use Grafana global time variables to specify time range, e.g.
 
 ```
-SELECT account_balance_range(account='myaccount', start=${__from}, end=${__to})
+SELECT account_balance_range(account="myaccount", start=${__from}, end=${__to},
+step="20a")
 ```
 
 As time variables are integer numbers, quotes are not required.
+
+Note: it's highly useful to use auto-step for charts.
 
 ## Data formats
 
@@ -67,16 +70,12 @@ functions can return timestamps:
 To change timestamp metric name, run query with "AS" parameter:
 
 ```sql
-SELECT account_balance_range(start=${__from}, end=${__to}, account='myaccount')
-    AS myaccount
+SELECT account_balance_range(start=${__from}, end=${__to}, account="myaccount",
+    step="20a") AS myaccount
 ```
 
 ## Troubleshooting
 
 ### Range charts are slow
 
-Increase range step, e.g.:
-
-```
-SELECT account_balance_range(account='myaccount', start=${__from}, end=${__to}, step=7)
-```
+Increase range step (or decrease, if using auto-step)
