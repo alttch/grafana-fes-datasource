@@ -54,6 +54,23 @@ SELECT account_balance_range(account='myaccount', start=${__from}, end=${__to})
 
 As time variables are integer numbers, quotes are not required.
 
+## Data formats
+
+By default, all Finac queries return table series data. The following query
+functions can return timestamps:
+
+* asset_rate
+* asset_rate_range
+* account_balance
+* account_balance range
+
+To change timestamp metric name, run query with "AS" parameter:
+
+```sql
+SELECT account_balance_range(start=${__from}, end=${__to}, account='myaccount')
+    AS myaccount
+```
+
 ## Troubleshooting
 
 ### Range charts are slow
