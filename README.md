@@ -63,7 +63,6 @@ Note: it's highly useful to use auto-step for charts.
 By default, all Finac queries return table series data. The following query
 functions can return timestamps:
 
-* asset_rate
 * asset_rate_range
 * account_balance
 * account_balance range
