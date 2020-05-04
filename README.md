@@ -34,7 +34,7 @@ systemctl restart grafana-server
 The data source supports all Finac query commands, e.g.
 
 ```sql
-SELECT account_balance(account='myaccount')
+SELECT account_balance(account="myaccount")
 ```
 
 ### Switching base currency on-the-flow
@@ -45,7 +45,7 @@ SELECT account_balance(account='myaccount')
 * then use variable in queries (don't forget about quotes):
 
 ```sql
-SELECT account_balance(account='myaccount', base="${base}")
+SELECT account_balance(account="myaccount", base="${base}")
 ```
 
 ### Time-based SELECT
