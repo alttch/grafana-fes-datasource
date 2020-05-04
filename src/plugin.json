@@ -21,6 +21,7 @@
       "large": "img/fes_logo.svg"
     },
     "links": [
+      {"name": "Learn more", "url": "https://www.altertech.com/products/fes/"},
       {"name": "GitHub", "url": "https://github.com/alttch/grafana-fes-datasource"},
       {"name": "MIT License", "url": "https://github.com/alttch/grafana-fes-datasource/blob/master/LICENSE"}
     ],
