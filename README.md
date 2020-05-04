@@ -5,6 +5,9 @@ Server](https://www.altertech.com/products/fes/)
 
 (can work with custom [Finac](https://github.com/alttch/finac) servers as well)
 
+![Dashboard](https://raw.githubusercontent.com/alttch/grafana-fes-datasource/master/screenshots/1.png "Dashboard")
+![Explore](https://raw.githubusercontent.com/alttch/grafana-fes-datasource/master/screenshots/2.png "Expore")
+
 ## Installation
 
 (become a superuser)
