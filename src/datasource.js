@@ -102,7 +102,7 @@ export class GenericDatasource {
 
   call_query(q) {
     return new Promise((resolve, reject) => {
-      fetch(this.url + '/query?grafana=1', {
+      fetch(this.url + '/query?time_ms=1', {
         method: 'POST',
         body: JSON.stringify(q),
         headers: {
