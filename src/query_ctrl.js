@@ -1,13 +1,13 @@
 import {QueryCtrl} from 'app/plugins/sdk';
 import './css/query-editor.css!'
 
-export class GenericDatasourceQueryCtrl extends QueryCtrl {
+export class FESDatasourceQueryCtrl extends QueryCtrl {
 
   constructor($scope, $injector)  {
     super($scope, $injector);
 
     this.scope = $scope;
-    this.target.target = this.target.target || 'select metric';
+    this.target.target = this.target.target || 'SELECT ';
     this.target.type = this.target.type || 'timeserie';
   }
 
@@ -24,4 +24,4 @@ export class GenericDatasourceQueryCtrl extends QueryCtrl {
   }
 }
 
-GenericDatasourceQueryCtrl.templateUrl = 'partials/query.editor.html';
+FESDatasourceQueryCtrl.templateUrl = 'partials/query.editor.html';
